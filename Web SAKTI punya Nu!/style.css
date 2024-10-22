@@ -1,0 +1,156 @@
+* {
+    margin: 0; /* Menghilangkan margin default dari semua elemen */
+    padding: 0; /* Menghilangkan padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur agar padding tidak menambah lebar elemen */
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Mengatur jenis font pada halaman */
+    line-height: 1.6; /* Mengatur tinggi baris teks */
+}
+
+header {
+    background: #fcd600; /* Mengatur background header menjadi abu-abu gelap */
+    color: #fff; /* Warna teks header menjadi putih */
+    padding: 10px 0; /* Padding vertikal pada header */
+    text-align: start; /* Mengatur teks menjadi rata tengah */
+}
+
+nav {
+    background: #fcd600; /* Mengatur background header */
+    color: #fff; /* Warna teks header menjadi putih */
+    padding: 2px 0; /* Padding vertikal pada header */
+}
+
+nav ul {
+    list-style: none; /* Menghilangkan tanda bullet pada list */
+    display: flex; /* Membuat elemen list tampil dalam baris */
+    justify-content: flex-end; /* Mengatur list rata kanan */
+    padding: 0; /* Menghilangkan padding default */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+nav ul li {
+    margin: 0 15px; /* Memberi jarak antar item navigasi */
+}
+
+nav ul li a {
+    color: #ffffff; /* Warna teks link menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    font-size: 18px; /* Mengatur ukuran font */
+}
+
+.section {
+    padding: 30px; /* Memberi padding di semua sisi */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+}
+
+#home, #contact {
+    background: #fff; /* Background bagian Home menjadi abu-abu muda */
+}
+
+#about{
+    background: #8a7d43; /* Background bagian About dan Contact menjadi abu-abu */
+    color: #fff; /* Warna teks header menjadi putih */
+}
+
+#about {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  
+  .about-photo {
+    flex: 1;
+    padding-right: 20px;
+    width: 50%;
+  }
+
+  .about-text {
+    flex: 2;
+  }
+
+  /* Media query untuk mobile */
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-photo {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      text-align: center;
+    }
+  }
+
+#portfolio {
+    background: #fff; /* Background bagian Portfolio menjadi putih */
+}
+
+/* Styling untuk section portfolio */
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Jarak antar card */
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background-color: #254336;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    flex-basis: calc(33.333% - 20px); /* Ukuran setiap card adalah 1/3 dari lebar baris, dengan memperhitungkan jarak antar card */
+}
+
+.portfolio-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-basis: calc(50% - 20px); /* Pada layar lebih kecil, card menjadi 2 dalam satu baris */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        flex-basis: 100%; /* Pada layar sangat kecil, card menjadi 1 per baris */
+    }
+}
+
+form {
+    max-width: 400px; /* Membatasi lebar form */
+    margin: 0 auto; /* Mengatur posisi form agar rata tengah */
+}
+
+form label, form input, form textarea {
+    display: block; /* Menampilkan elemen dalam bentuk blok */
+    width: 100%; /* Mengatur lebar elemen input menjadi penuh */
+    margin: 10px 0; /* Memberi jarak antara elemen input */
+}
+
+form button {
+    padding: 10px 20px; /* Padding tombol form */
+    background-color: #254336; /* Warna background tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghilangkan border tombol */
+    cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+}
+
+footer {
+    background: #254336; /* Background footer berwarna abu-abu gelap */
+    color: #fff; /* Warna teks footer menjadi putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 20px 0; /* Padding vertikal di footer */
+    margin-top: 20px; /* Jarak antara footer dan elemen atasnya */
+}
